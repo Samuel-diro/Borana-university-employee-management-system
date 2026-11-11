@@ -1,0 +1,6 @@
+{
+  "name": "Borana University Employee Management System",
+  "description": "Comprehensive Web-Based Employee Management System for Borana University (Group 3). Features employee registration, academic & administrative staff management, colleges, departments, biometric attendance, leave approval workflows, RBAC, and reporting.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

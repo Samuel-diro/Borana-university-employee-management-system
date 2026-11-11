@@ -1,0 +1,180 @@
+/**
+ * =====================================================================
+ * BORANA UNIVERSITY - EMPLOYEE MANAGEMENT SYSTEM
+ * MASTER STYLESHEET (CSS3)
+ * =====================================================================
+ * Group 3 - November 2026
+ * Pure CSS3 with Custom Properties - Editable in VS Code
+ */
+
+:root {
+    --bu-navy: #0a2540;
+    --bu-navy-dark: #07192c;
+    --bu-navy-light: #163e66;
+    --bu-gold: #c59b27;
+    --bu-gold-light: #dfb238;
+    --bu-sidebar-width: 260px;
+    --bu-bg-body: #f8fafc;
+}
+
+body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background-color: var(--bu-bg-body);
+    color: #1e293b;
+    min-height: 100vh;
+}
+
+.font-mono {
+    font-family: 'JetBrains Mono', SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+}
+
+/* Theme Utilities */
+.bg-bu-navy {
+    background-color: var(--bu-navy) !important;
+}
+
+.bg-bu-navy-dark {
+    background-color: var(--bu-navy-dark) !important;
+}
+
+.text-bu-gold {
+    color: var(--bu-gold) !important;
+}
+
+.border-bu-gold {
+    border-color: var(--bu-gold) !important;
+}
+
+.btn-bu-navy {
+    background-color: var(--bu-navy);
+    color: #ffffff;
+    font-weight: 600;
+    border: none;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.btn-bu-navy:hover {
+    background-color: var(--bu-navy-dark);
+    color: #ffffff;
+}
+
+.btn-bu-navy:active {
+    transform: translateY(1px);
+}
+
+/* Layout Components */
+.sidebar {
+    width: var(--bu-sidebar-width);
+    background: linear-gradient(180deg, var(--bu-navy-dark) 0%, var(--bu-navy) 100%);
+    min-height: 100vh;
+    color: #ffffff;
+    transition: all 0.3s ease;
+}
+
+.sidebar .nav-link {
+    color: #94a3b8;
+    padding: 0.75rem 1.15rem;
+    font-size: 0.88rem;
+    font-weight: 500;
+    border-radius: 8px;
+    margin: 3px 8px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    transition: background 0.15s ease, color 0.15s ease;
+}
+
+.sidebar .nav-link:hover {
+    color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.08);
+}
+
+.sidebar .nav-link.active {
+    color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.14);
+    border-left: 4px solid var(--bu-gold);
+}
+
+.top-navbar {
+    background-color: #ffffff;
+    border-bottom: 1px solid #e2e8f0;
+    height: 64px;
+    position: sticky;
+    top: 0;
+    z-index: 1020;
+}
+
+/* Cards & Tables */
+.card {
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.04);
+    border-radius: 12px;
+    transition: box-shadow 0.2s ease;
+}
+
+.card:hover {
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.06);
+}
+
+.table th {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #64748b;
+    font-weight: 700;
+    background-color: #f8fafc;
+    border-bottom: 2px solid #e2e8f0;
+    padding: 0.85rem 1rem;
+}
+
+.table td {
+    vertical-align: middle;
+    font-size: 0.86rem;
+    padding: 0.85rem 1rem;
+}
+
+/* Badges */
+.badge-academic {
+    background-color: #e0f2fe;
+    color: #0369a1;
+    font-weight: 600;
+}
+
+.badge-admin {
+    background-color: #f1f5f9;
+    color: #475569;
+    font-weight: 600;
+}
+
+/* Print Stylesheet for Official Reports */
+@media print {
+    .no-print, .sidebar, .top-navbar, footer, .btn, .dropdown {
+        display: none !important;
+    }
+
+    body {
+        background-color: #ffffff !important;
+        color: #000000 !important;
+        font-size: 11pt;
+    }
+
+    .main-content {
+        margin: 0 !important;
+        padding: 0 !important;
+        width: 100% !important;
+    }
+
+    .card {
+        border: none !important;
+        box-shadow: none !important;
+    }
+
+    .print-only {
+        display: block !important;
+    }
+
+    .table {
+        border: 1px solid #cbd5e1 !important;
+        width: 100% !important;
+    }
+}

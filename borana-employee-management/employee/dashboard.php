@@ -1,0 +1,17 @@
+<?php
+/**
+ * Employee Self-Service Dashboard
+ * Borana University Employee Management System
+ */
+
+declare(strict_types=1);
+define('APP_ROOT', dirname(__DIR__));
+
+require_once APP_ROOT . '/includes/functions.php';
+$pdo = require_once APP_ROOT . '/config/database.php';
+require_once APP_ROOT . '/includes/auth.php';
+
+require_login('../auth/login.php');
+
+header("Location: ../admin/dashboard.php");
+exit;
